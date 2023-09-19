@@ -13,12 +13,12 @@ public class ArrayStackClass<T> {
         items = (T[]) new Object[maxSize];      //creates instance of array, sets size to maxSize variable
         top = 0;                                 // sets top number to 0
     }
-    public void push(T element){
-    if (top== maxSize){
-        throw new StackOverflowError();
+    public void push(T element){              // method to add to the top of the stack
+    if (top == maxSize){
+        throw new StackOverflowError();       // throws error if we go over maxSize
     }
     else {
-        items[top++] = (T) element;
+        items[top++] = (T) element;          // adds to the top of the stack
     }
     }
 
@@ -30,15 +30,15 @@ public class ArrayStackClass<T> {
 
     }
 
-    boolean empty(){
-    if (items.length == 0){
-        return False;
+
+    boolean empty(){          // checks for empty stack
+        if (items.length == 0){
+            return true;
         }
-    else {
-        return True;
+        else {
+            return false;
         }
     }
-
     size(){
 
     }
