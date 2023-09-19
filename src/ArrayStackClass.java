@@ -4,7 +4,7 @@
 import java.util.EmptyStackException;
 
 public class ArrayStackClass<T> {
-    private T[] items;
+    private T[] items;  // general parameter for array
     int top;    // current amount stored in the stack
     int maxSize;  // max size of the stack
 
@@ -30,8 +30,13 @@ public class ArrayStackClass<T> {
 
     }
 
-    empty(){
-
+    boolean empty(){
+    if (items.length == 0){
+        return False;
+        }
+    else {
+        return True;
+        }
     }
 
     size(){
