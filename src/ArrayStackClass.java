@@ -5,13 +5,13 @@ import java.util.EmptyStackException;
 
 public class ArrayStackClass<T> {
     private T[] items;  // general parameter for array
-    int top;    // current amount stored in the stack
+    int top;    // current top number
     int maxSize;  // max size of the stack
 
-    public ArrayStackClass(int N){
-        maxSize = N;
-        items = (T[]) new Object[maxSize];
-        top = 0;
+    public ArrayStackClass(int N){        // constructor for ArrayStack
+        maxSize = N;                      // sets initial max size
+        items = (T[]) new Object[maxSize];      //creates instance of array, sets size to maxSize variable
+        top = 0;                                 // sets top number to 0
     }
     public void push(T element){
     if (top== maxSize){
