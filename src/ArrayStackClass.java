@@ -22,12 +22,20 @@ public class ArrayStackClass<T> {
     }
     }
 
-    pop(){
-
+    public T pop(){
+    if(empty()){
+        throw new EmptyStackException();
+    } else {
+        return items[--top];
+        }
     }
 
-    peek(){
-
+    public T peek(){
+    if(empty()){
+        throw new EmptyStackException();
+    } else {
+        return items[top -1];
+    }
     }
 
 
@@ -39,8 +47,8 @@ public class ArrayStackClass<T> {
             return false;
         }
     }
-    size(){
-
+    public int size(){
+    return top;
     }
 
 }
